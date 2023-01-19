@@ -1,9 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿namespace NetCore_01.Models
+{
+    public class Pizza {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Img  { get;}
 
-namespace La_mia_pizzeria_Model.Models {
-    public class Pizza : Controller {
-        public IActionResult Index() {
-            return View();
+        public Pizza(int id, string name, string description, string img) {
+            Id = id;
+            Name = name;
+            Description = description;
+            Img = img;
         }
     }
+
 }
+
